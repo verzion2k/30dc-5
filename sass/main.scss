@@ -1,11 +1,109 @@
-$color: red;
-h1 {
-    color: $color;
+/* Variables */
+
+$primaryFont: 'Poppins';
+$secondaryFont: 'Montserrat';
+$navbarHeight: 8.5vh;
+$light-border: red;
+
+/*rgba(236, 236, 236, 0.2)*/
+
+
+/* [2] Navigation-Menu */
+
+.navbar {
+    height: $navbarHeight;
+    border-bottom: 1px solid $light-border;
+    padding: 0;
 }
 
-.navbar {}
+.navbar-brand,
+.navbar-logo,
+.navbar-menu,
+.nav-item,
+.nav-link,
+.navbar-additional,
+.navbar-search {
+    height: inherit;
+}
+
+.navbar-additional,
+.navbar-search {
+    border-left: 1px solid $light-border;
+}
+
+
+/* Logo */
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 1.875rem;
+}
+
+.navbar-logo {
+    border-right: 1px solid $light-border;
+}
 
 .logo {
-    max-height: 60px;
-    max-width: 160px;
+    max-height: 7vh;
+    max-width: 13vh;
+}
+
+
+/* Nav Items */
+
+.navbar-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.nav-item {
+    padding: 0.5rem 1.625rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Nav Additional */
+
+.navbar-additional {
+    padding: 0 2.5rem;
+    text-align: center;
+}
+
+.social-box {
+    height: 1.875rem;
+    width: 1.875rem;
+}
+
+.social-box:not(:last-child) {
+    margin-right: 1.563rem;
+}
+
+
+/* Nav Search */
+
+.navbar-search {
+    padding: 0 2.5rem;
+}
+
+.fa-search {
+    height: 3.125rem;
+    width: 3.125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 992px) {
+    .navbar-menu {
+        height: 100%;
+    }
 }
